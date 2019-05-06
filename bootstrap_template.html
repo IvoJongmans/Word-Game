@@ -12,10 +12,71 @@
 
 <body>
   
-  
+<input type="text" name="input" id="input" maxlength="5" minlength="5">
+<button type="button" id="button" onclick="getInput(), checkScore()">Check</button>
+
+<div id="answerPara">
+
+</div>
+
+<div id="scorePara">
+
+</div>
+
+<div id="triesPara">
+</div>
 
 
+<script>
+  var answer = "lingo";
+  var para = document.getElementById("answerPara");
+  var scorePara = document.getElementById("scorePara");
+  var triesPara = document.getElementById("triesPara")
+  var tries = 0;
+  var score = 0;
+  var input = "";
 
+
+  function getInput () {
+    para.innerHTML += "<p>";
+    input = document.getElementById("input").value;
+    if (input.length < 5) {
+      alert("Vul een vijfletter woord in!");
+    }
+    else {
+    for (i=0; i < input.length; i++) {
+    if (answer[i] == input[i]) {
+      para.innerHTML += "<span style='color:green;font-size:50px'>" + input[i] + "</span>";
+      score += 1;     
+    }
+    else if (answer[i] !== input[i]) {
+      para.innerHTML += "<span style='color:red;font-size:50px'>" + input[i] + "</span>";  
+    }
+  }
+  tries += 1;
+  para.innerHTML += "</p>"
+  }
+  }
+
+  function checkScore() {
+    if (tries <= 5 && answer == input) {
+      alert("Lingo!");
+      para.innerHTML = "";
+      tries = 0;
+      score = 0;
+      document.getElementById("input").value = "";
+    }
+    else if (answer != input && tries == 5) {
+      alert("Probeer het nog een keer!");
+      para.innerHTML = "";
+      tries = 0;
+      score = 0;
+      document.getElementById("input").value = "";
+    }
+    
+  }
+
+</script>
 
 </body>
 </html>
