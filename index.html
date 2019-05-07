@@ -12,6 +12,14 @@
 
 <body>
 <h1 class="jumbotron text-center">Welcome to Lingo!</h1>
+<div class="col-xs-12 regels">
+  <ul>
+    <li>You've got five (5) turns to try and guess the word.</li>
+    <li>A green letter means that the letter is on the correct spot.</li>
+    <li>A blue letter means that the letter is correct but on the wrong spot.</li>
+    <li>A red letter means the letter is incorrect and isn't part of the word.</li>
+  </ul>
+</div>
 
 <div class="text-center">
 <input type="text" name="input" id="input" maxlength="5" minlength="5">
@@ -33,7 +41,7 @@
 
 
   var randomindex = getRandomInt(0, 4);
-  var answers = ["lingo", "bezem", "water", "jasje", "tonic"];
+  var answers = ["LINGO", "BEZEM", "WATER", "JASJE", "TONIC"];
   var answer = answers[randomindex];
   console.log(answer);
   var para = document.getElementById("answerPara");
@@ -52,6 +60,7 @@
   function getInput () {
     para.innerHTML += "<p>";
     input = document.getElementById("input").value;
+    input = input.toUpperCase();
     if (input.length < 5) {
       alert("Vul een vijfletter woord in!");
     }
