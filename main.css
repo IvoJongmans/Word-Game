@@ -15,21 +15,24 @@ body {
     color: white;
     background-color: red;
     font-size: 56px;
-    border:5px solid white;
+    border:5px solid #1E76B6;
+    border-radius: 50px;
 }
 
 .plekgoed {
     color: white;
     background-color: yellow;
     font-size: 56px;
-    border:5px solid white;
+    border:5px solid #1E76B6;
+    border-radius: 50px;
 }
 
 .fout {
     color: white;
     background-color: #1E76B6;
     font-size: 56px;
-    border:5px solid white;
+    border:5px solid #1E76B6;
+    border-radius: 50px;
 }
 
 #lingobutton {
