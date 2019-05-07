@@ -32,4 +32,8 @@ body {
     border:5px solid white;
 }
 
+#lingobutton {
+    max-width: 100px;
+}
+
 
