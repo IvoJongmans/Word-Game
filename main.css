@@ -1,7 +1,12 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: blue;
 }
 
+#logo {
+    max-width: 300px;
+}
 
+.regels {
+    margin-top: 500px;
+}
 
