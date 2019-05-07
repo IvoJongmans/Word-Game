@@ -12,23 +12,24 @@
 </head>
 
 <body>
-<h1 class="jumbotron text-center">Welcome to Lingo!</h1>
-<div class="row">
-<div class="col-xs-3"></div>
-<div class="col-xs-6 regels">
-  <ul>
-    <li>You've got five (5) turns to try and guess the word.</li>
-    <li>A green letter means that the letter is on the correct spot.</li>
-    <li>A blue letter means that the letter is correct but on the wrong spot.</li>
-    <li>A red letter means the letter is incorrect and isn't part of the word.</li>
-    <li>A message wil appear if you've won or lost. A new game starts automatically.</li>
-  </ul>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <img src="lingologo.jpg" alt="Afbeelding Lingo" id="logo">
+      <h3><a href="#spelregels">Spelregels</a></h3>
+    </div>
+  </div>
 </div>
-<div class="col-xs-3"></div>
-</div>
-<div class="col-xs-12 text-center">
-<h3>Tries:</h3>
-<p id="triesoutput"></p>
+
+
+<div class="container">
+  <div class="row"></div>
+    <div class="col-xs-12 text-center">
+      <h3>Tries:</h3>
+      <p id="triesoutput"></p>
+    </div>
+  </div>
 </div>
 
 
@@ -39,6 +40,20 @@
 <div class="text-center" id="answerPara"></div>
 
 </div>
+
+<div class="row">
+  <div class="col-xs-3"></div>
+  <div class="col-xs-6 regels">
+    <ul id="spelregels">
+      <li>You've got five (5) turns to try and guess the word.</li>
+      <li>A green letter means that the letter is on the correct spot.</li>
+      <li>A blue letter means that the letter is correct but on the wrong spot.</li>
+      <li>A red letter means the letter is incorrect and isn't part of the word.</li>
+      <li>A message wil appear if you've won or lost. A new game starts automatically.</li>
+    </ul>
+  </div>
+  <div class="col-xs-3"></div>
+  </div>
 
 <script>
   var randomindex = getRandomInt(0, 4);
