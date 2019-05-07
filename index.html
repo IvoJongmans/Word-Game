@@ -25,21 +25,27 @@
 
 <div class="container">
   <div class="row"></div>
-    <div class="col-xs-12 text-center">
+    <div class="col-xs-6 text-center tries">
       <h3>Tries:</h3>
       <p id="triesoutput"></p>
     </div>
+    <div class="col-xs-6 text-center score">
+      <h3>Score:</h3>
+      <p id="scoreoutput"></p>
+    </div>
   </div>
-</div>
+
 
 
 <div class="text-center">
 <input type="text" name="input" id="input" maxlength="5" minlength="5">
 <button type="button" id="button" onclick="getInput(), checkScore()">Check</button>
 </div>
-<div class="text-center" id="answerPara"></div>
-
+<div class="text-center" id="answerPara">
+  
 </div>
+
+
 
 <div class="row">
   <div class="col-xs-3"></div>
@@ -62,10 +68,12 @@
   console.log(answer);
   var para = document.getElementById("answerPara");
   var triesPara = document.getElementById("triesoutput");
+  var scorePara = document.getElementById("scoreoutput");
   var tries = 0;
   var triesoutput = 5;
-  triesPara.innerHTML = triesoutput;
+  triesPara.innerHTML = triesoutput;  
   var score = 0;
+  scorePara.innerHTML = score;
   var input = "";
 
   function getRandomInt(min, max) {
@@ -84,20 +92,21 @@
     else {
     for (i=0; i < input.length; i++) {
     if (answer[i] == input[i]) {
-      para.innerHTML += "<span style='color:green;font-size:50px'>" + input[i] + "</span>";
+      para.innerHTML += "<span class='goed'>" + input[i] + "</span>";
       score += 1;     
     }
     else if (answer.includes(input[i])) {
-      para.innerHTML += "<span style='color:blue;font-size:50px'>" + input[i] + "</span>";
+      para.innerHTML += "<span class='plekgoed'>" + input[i] + "</span>";
       console.log("klopt");
     }
     else if (answer[i] !== input[i]) {
-      para.innerHTML += "<span style='color:red;font-size:50px'>" + input[i] + "</span>";  
+      para.innerHTML += "<span class='fout'>" + input[i] + "</span>";  
     }
   }
   tries += 1;
   triesoutput -= 1;
   triesPara.innerHTML = triesoutput;
+  scorePara.innerHTML = score;
   para.innerHTML += "</p>"
   }
   }

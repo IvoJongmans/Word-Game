@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
+   
 }
 
 #logo {
@@ -9,4 +10,26 @@ body {
 .regels {
     margin-top: 500px;
 }
+
+.goed {
+    color: white;
+    background-color: red;
+    font-size: 56px;
+    border:5px solid white;
+}
+
+.plekgoed {
+    color: white;
+    background-color: yellow;
+    font-size: 56px;
+    border:5px solid white;
+}
+
+.fout {
+    color: white;
+    background-color: #1E76B6;
+    font-size: 56px;
+    border:5px solid white;
+}
+
 
